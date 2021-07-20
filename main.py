@@ -62,4 +62,8 @@ class NeuralNet():
         biases_in = [np.array(i) for i in wandb["biases"]]
         layers_in = wandb["layers"]
         
+        self.layers = layers_in
+        self.weights = weights_in
+        self.biases = biases_in
+        
         self.build()
