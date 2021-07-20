@@ -28,12 +28,14 @@ class NeuralNet():
         if self.weights == []:
             for i in range(len(self.layers)-1):
                 self.weights.append(np.reshape([random.uniform(0,1) for j in range(self.layers[i]*self.layers[i+1])],(self.layers[i+1],self.layers[i])))
+                #self.weights = np.array(self.weights)
         
         if self.biases == []:
             for i in range(len(self.layers)-1):
                 self.biases.append(np.array([random.uniform(0,1) for j in range(self.layers[i+1])]))
+                #self.biases = np.array(self.biases)
                 
-        self.neurons = [[0 for j in range(self.layers[i])] for i in range(len(self.layers))]
+        self.neurons = [np.array([0 for j in range(self.layers[i])]) for i in range(len(self.layers))]
     
     def feedforward(input_):
         # evaluate model on input
@@ -45,11 +47,19 @@ class NeuralNet():
     
     def dump(self):
         # return weights & biases
-        #with open("wandb.json", "w") as file: 
-            #json.dump({"layers":self.layers, "weights":self.weights, "biases":self.biases}, file)
-            #NumPy array is not JSON serializable
+        weights_out = [i.tolist() for i in self.weights]
+        biases_out = [i.tolist() for i in self.biases]
+        
+        with open("wandb.json", "w") as file: 
+            json.dump({"layers":self.layers, "weights":weights_out, "biases":biases_out}, file)        
     
-    def load(self,wb_file):
+    def load(self):
         # load dumped weights & biases
-        #self.weights = 
-        #self.biases =
+        with open("wandb.json", "r") as file: 
+            wandb = json.load(file) 
+            
+        weights_in = [np.array(i) for i in wandb["weights"]]
+        biases_in = [np.array(i) for i in wandb["biases"]]
+        layers_in = wandb["layers"]
+        
+        self.build()
