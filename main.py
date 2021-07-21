@@ -5,23 +5,17 @@ import random
 import json 
 
 class NeuralNet():
-    def __init__(self,layers,weights=[],biases=[],neurons=[]):
+    def __init__(self,layers,weights=[],biases=[],neurons=[],cost,rule):
         self.layers = layers
         self.weights = weights
         self.biases = biases
         self.neurons = neurons
+        self.cost = cost
+        self.rule = rule
     
     def sigmoid(x):
         # activation function
         return (exp(x))/(exp(x)+1)
-    
-    def cost():
-        # cost function
-        return
-    
-    def decision():
-        # decision rule on output layer
-        return
     
     def build(self):
         # initalize weights & biases
@@ -39,10 +33,12 @@ class NeuralNet():
     
     def feedforward(input_):
         # evaluate model on input
+        # use self.rule
         return
     
     def train(training_set):
         # train model on training_set
+        # use self.cost
         return
     
     def dump(self):
