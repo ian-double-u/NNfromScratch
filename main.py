@@ -19,12 +19,10 @@ class NeuralNet():
         if self.weights == []:
             for i in range(len(self.layers)-1):
                 self.weights.append(np.reshape([random.uniform(0,1) for j in range(self.layers[i]*self.layers[i+1])],(self.layers[i+1],self.layers[i])))
-                #self.weights = np.array(self.weights)
         
         if self.biases == []:
             for i in range(len(self.layers)-1):
                 self.biases.append(np.array([random.uniform(0,1) for j in range(self.layers[i+1])]))
-                #self.biases = np.array(self.biases)
                 
         self.neurons = [np.array([0 for j in range(self.layers[i])]) for i in range(len(self.layers))]
     
