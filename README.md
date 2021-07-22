@@ -7,6 +7,7 @@ Building a simple Neural Network from Scratch (a multilayer perceptron, specific
 
 ## Goals Brainstorm
 - MNSIST Handwritten Digit Classification
+- Decrypt Caesar Cipher
 - Tetris Bot
 - Simple cypher decryption
 - etc.

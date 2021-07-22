@@ -5,44 +5,40 @@ import random
 import json 
 
 class NeuralNet():
-    def __init__(self,layers,weights=[],biases=[],neurons=[]):
+    def __init__(self,layers,weights=[],biases=[],neurons=[],activation,cost,rule):
         self.layers = layers
         self.weights = weights
         self.biases = biases
         self.neurons = neurons
-    
-    def sigmoid(x):
-        # activation function
-        return (exp(x))/(exp(x)+1)
-    
-    def cost():
-        # cost function
-        return
-    
-    def decision():
-        # decision rule on output layer
-        return
+        self.activation = activation
+        self.cost = cost
+        self.rule = rule
     
     def build(self):
         # initalize weights & biases
         if self.weights == []:
             for i in range(len(self.layers)-1):
                 self.weights.append(np.reshape([random.uniform(0,1) for j in range(self.layers[i]*self.layers[i+1])],(self.layers[i+1],self.layers[i])))
-                #self.weights = np.array(self.weights)
         
         if self.biases == []:
             for i in range(len(self.layers)-1):
                 self.biases.append(np.array([random.uniform(0,1) for j in range(self.layers[i+1])]))
-                #self.biases = np.array(self.biases)
                 
         self.neurons = [np.array([0 for j in range(self.layers[i])]) for i in range(len(self.layers))]
     
     def feedforward(input_):
         # evaluate model on input
+        #self.neurons = [np.array([0 for j in range(self.layers[i])]) for i in range(len(self.layers))]
+        # use self.rule
         return
+    
+    def predict(input_):
+        # makes prediction
+        # feedforward then decision rule 
     
     def train(training_set):
         # train model on training_set
+        # use self.cost
         return
     
     def dump(self):
