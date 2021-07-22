@@ -9,4 +9,5 @@ Building a simple Neural Network from Scratch (a multilayer perceptron, specific
 - MNSIST Handwritten Digit Classification
 - Decrypt Caesar Cipher
 - Tetris Bot
-- etc. 
+- Simple cypher decryption
+- etc.
