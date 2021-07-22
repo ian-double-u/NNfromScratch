@@ -8,4 +8,5 @@ Building a simple Neural Network from Scratch (a multilayer perceptron, specific
 ## Goals Brainstorm
 - MNSIST Handwritten Digit Classification
 - Tetris Bot
-- etc. 
+- Simple cypher decryption
+- etc.
