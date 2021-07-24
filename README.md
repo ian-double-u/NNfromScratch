@@ -11,3 +11,6 @@ Building a simple Neural Network from Scratch (a multilayer perceptron, specific
 - Tetris Bot
 - Simple cypher decryption
 - etc.
+
+## Advanced Features
+- Fully matrix-based approach to backpropagation over a mini-batch
