@@ -13,4 +13,4 @@ Building a simple Neural Network from Scratch (a multilayer perceptron, specific
 - etc.
 
 ## Advanced Features
-- [] Fully matrix-based approach to backpropagation over a mini-batch
+&#9744; Fully matrix-based approach to backpropagation over a mini-batch
