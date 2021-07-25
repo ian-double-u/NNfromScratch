@@ -1,6 +1,5 @@
 using JSON
 function dump(net::Network)::Nothing
-    # dictionary to write
     dict = Dict("layers" => net.layers,
                 "neurons" => net.neurons,
                 "weights" => net.weights,
