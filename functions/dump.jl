@@ -14,6 +14,6 @@ function dump(net::Network)::Nothing
         write(file, JSON.json(dict))
     end
 
-    println("Saved $(net) to net.json")
+    println("Saved to net.json")
     return nothing
 end
