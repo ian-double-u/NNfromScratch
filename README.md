@@ -13,5 +13,5 @@ Building a simple Neural Network from Scratch (a multilayer perceptron, specific
 - etc.
 
 ## Advanced Features
-&#9744; Fully matrix-based approach to backpropagation over a mini-batch \n
+&#9744; Fully matrix-based approach to backpropagation over a mini-batch    
 &#9744; Glorot normal initializer
