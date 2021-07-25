@@ -17,10 +17,10 @@ mutable struct Network
 
     function Network(;layers, batch, epochs, η, act, act_p, C, ∇C_a)
         new(layers,
-            neurons = [[0 for j=1:layers[i]] for i=1:length(layers)],
+            neurons = [[0.0 for j=1:layers[i]] for i=1:length(layers)],
             weights = [randn(Float64,layers[i+1],layers[i]) for i=1:length(layers)],
             biases = [rand!(MersenneTwister(1234), zeros(layers[i])) for i=2:length(layers)],
-            z = [[0 for j=1:layers[i]] for i=1:length(layers)],
+            z = [[0.0 for j=1:layers[i]] for i=1:length(layers)],
             batch, epochs, η, act, act_p, C, ∇C_a)
     end
 end
