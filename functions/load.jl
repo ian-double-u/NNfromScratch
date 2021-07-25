@@ -1,4 +1,4 @@
-Using JSON
+using JSON
 function load!(net::Network,file_str::String)::Network
     dict = Dict()
 
