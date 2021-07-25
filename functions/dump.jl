@@ -1,5 +1,5 @@
 using JSON
-function dump(net::Network)::Nothing
+function dump(net::Network,file_str::String)::Nothing
     dict = Dict("layers" => net.layers,
                 "neurons" => net.neurons,
                 "weights" => net.weights,
@@ -9,10 +9,10 @@ function dump(net::Network)::Nothing
                 "epochs" => net.epochs,
                 "η" => net.η)
 
-    open("net.json", "w") do file
+    open(file_str, "w") do file
         write(file, JSON.json(dict))
     end
 
-    println("Saved to net.json")
+    println("Saved to $(file_str)")
     return nothing
 end
