@@ -11,5 +11,5 @@ function backprop(net::Network,input::Vector{Float64},label::Vector{Float64})::V
         prepend!(errors,next_error)
     end
 
-    return errors
+    return errors, net.neurons
 end
