@@ -1,3 +1,4 @@
+"""
 Network()
     layers::Vector{Int64}
     neurons::Vector{Vector{Float64}}
@@ -10,8 +11,8 @@ Network()
     act::Function
     act_p::Function
     C::Function
-    C_p::Function
     ∇C_a(a,l)::Fucntion #takes activation layer a, label l
 
     # __constructor__ (use randn(Float64,n,m))
 end
+"""
