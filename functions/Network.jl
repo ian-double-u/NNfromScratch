@@ -5,7 +5,7 @@ Network()
     biases::Vector{Vector{Float64}}
     z::Vector{Vector{Float64}}
     batch::Int64
-    epoch::Int64
+    epochs::Int64
     η::Float64
     act::Function
     act_p::Function
