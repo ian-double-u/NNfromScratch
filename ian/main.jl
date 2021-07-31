@@ -1,7 +1,7 @@
 using Random
 using JSON
 
-mutable struct testNetwork
+mutable struct Network
     layers::Vector{Int64}
     neurons::Vector{Vector{Float64}}
     weights::Vector{Matrix{Float64}}
@@ -15,7 +15,7 @@ mutable struct testNetwork
     C
     ∇C_a
 
-    function testNetwork(layers,batch,epochs,η,act,act_p,C,∇C_a)
+    function Network(layers,batch,epochs,η,act,act_p,C,∇C_a)
         new(layers::Vector{Int64},
         [[0.0 for j=1:layers[i]] for i=1:length(layers)],
         [randn(Float64,layers[i+1],layers[i]) for i=1:(length(layers)-1)],
